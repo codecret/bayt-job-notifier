@@ -31,4 +31,4 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
           PORT: ${{ secrets.PORT }}
-        run: python your_bot_script.py
+        run: python3 fetch_jobs.py
