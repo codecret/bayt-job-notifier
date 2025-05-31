@@ -1,0 +1,22 @@
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore environment variables files (if you use .env)
+.env
+
+# Ignore any local config files or secrets
+*.json
+*.txt
+*.pdf
+
+# Ignore Chrome driver binaries if you download them locally
+chromedriver
+chromedriver.exe
+
+# Ignore logs
+*.log
+
+# Ignore virtual environment folders
+venv/
+env/
