@@ -2,8 +2,8 @@ name: Run Job Scraper Bot
 
 on:
   schedule:
-    - cron: '*/30 * * * *'   # every 30 minutes
-  workflow_dispatch:          # manual trigger option
+    - cron: "*/30 * * * *" # every 30 minutes
+  workflow_dispatch: # manual trigger option
 
 jobs:
   run-bot:
@@ -13,15 +13,18 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python 3.10
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Set up Python 3.13.1
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10'
+          python-version: "3.13.1"
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r requirements.txt
 
       - name: Run bot script
         env:
